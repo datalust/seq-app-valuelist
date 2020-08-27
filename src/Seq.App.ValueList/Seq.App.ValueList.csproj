@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <Description>Track distinct values for a particular event property.</Description>
+        <Authors>Datalust and Contributors</Authors>
+        <PackageTags>seq-app</PackageTags>
+        <PackageProjectUrl>https://github.com/datalust/seq-app-valuelist</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/datalust/seq-app-valuelist</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <TreatSpecificWarningsAsErrors />
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Seq.Apps" Version="5.1.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="../../LICENSE" Pack="true" PackagePath="" />
+        <None Include="./obj/publish/**/*" Exclude="./obj/publish/$(MSBuildProjectName).dll;./obj/publish/Seq.Apps.dll;./obj/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
+    </ItemGroup>
+</Project>
