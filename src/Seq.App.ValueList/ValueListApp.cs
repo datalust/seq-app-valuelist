@@ -37,7 +37,7 @@ namespace Seq.App.ValueList
             if (_values.TryAdd(s))
             {
                 Log.ForContext("AllValues", _values.ToOrderedArray())
-                    .Information("New value {NewValue} detected for property {PropertyName}");
+                    .Information("New value {NewValue} detected for property {PropertyName}", s, PropertyName);
             }
         }
     }
